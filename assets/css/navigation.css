@@ -47,7 +47,7 @@ nav button{
     right: 0;
     bottom: 35px;
     display: none;
-    background-image: url(/assets/images/img.jpg);
+    background-image: url(../images/img.jpg);
     background-position: center;
     background-size: cover;
     height: 30px;
