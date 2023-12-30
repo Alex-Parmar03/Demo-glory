@@ -33,7 +33,7 @@ nav ul {
     margin: 0px;
 }
 header {
-    border-bottom: 1px solid var(--color-white-gray);
+    border-bottom: 1px solid var(--color-border);
     margin: 10px 0px;
 }
 .nav-title {
@@ -66,7 +66,7 @@ nav button{
         transition: all 1s;
         display: block;
         width: 300px;
-        border: 1px solid var(--color-white-gray);
+        border: 1px solid var(--color-border);
         height: 100vh;
     }
     nav li:hover {
