@@ -22,7 +22,7 @@ nav ul li a::after {
    background: var(--color-green);
    transition: all 0.5s;
 }
-nav ul li:hover a::after{
+nav ul li a:hover::after{
     width: 100%;
 }
 nav ul li {
@@ -88,4 +88,42 @@ nav button{
 
 .block{
     transform: translateX(-3%);
+}
+
+
+/* mega nav */
+.mega-nav{
+    position: relative;
+}
+.mega-nav:hover .secondary-nev {
+    display:block;
+}
+.secondary-nev {
+    display: none;
+    position: absolute;
+    top: 69px;
+    left: 0;
+    border: 1px solid var(--color-border);
+    width: max-content;
+}
+.secondary-nev ul li {
+    padding-bottom: 0px;
+}
+.secondary-nev ul:last-child {
+    padding-bottom: 20px;
+}
+
+
+
+.third-nev-main:hover .third-nev {
+    display:block;
+}
+.third-nev {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    border: 1px solid var(--color-border);
+    width: max-content;
+    height: 100%;
 }
