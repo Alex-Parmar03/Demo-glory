@@ -91,12 +91,7 @@ nav button {
 
 .third-nev {
     display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    border: 1px solid var(--color-border);
-    width: max-content;
-    height: 100%;
+    position: relative;
 }
 
 /* media query */
@@ -107,6 +102,14 @@ nav button {
         left: 0;
         border: 1px solid var(--color-border);
         width: max-content;
+    }
+    .third-nev {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        border: 1px solid var(--color-border);
+        width: max-content;
+        height: 100%;
     }
 }
 
