@@ -1,3 +1,7 @@
+header {
+    position: sticky;
+    z-index: 1;
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -48,6 +52,11 @@ header {
     display: flex;
     text-align: center;
     padding: 0px;
+    background: var(--color-white);
+}
+
+.nav-title li {
+    cursor: pointer;
 }
 
 /* navigation toggle button */
@@ -56,7 +65,7 @@ nav button {
     right: 0;
     bottom: 35px;
     display: none;
-    background-image: url(../images/img.jpg);
+    background-image: url(../images/toggle-icon.png);
     background-position: center;
     background-size: cover;
     height: 30px;
@@ -68,13 +77,10 @@ nav button {
     position: relative;
 }
 
-.mega-nav:hover .secondary-nev {
-    display: block;
-}
-
 .secondary-nev {
     display: none;
     position: relative;
+    background: var(--color-white);
 }
 
 .secondary-nev ul li {
@@ -85,13 +91,43 @@ nav button {
     padding-bottom: 20px;
 }
 
-.third-nev-main:hover .third-nev {
+.third-nev {
+    display: none;
+    position: absolute;
+    left: 228px;
+    width: max-content;
+    top: 15px;
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+}
+
+.third-nev-main {
+    position: relative;
+}
+
+.third-nev-main:hover .third-nev, .mega-nav-block {
     display: block;
 }
 
-.third-nev {
-    display: none;
-    position: relative;
+
+/* icon */
+.mega-nav span.mega-nav-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: x-large;
+    width: 46px;
+}
+
+.mega-nav span.mega-nav-icon::after {
+    display: block;
+    content: '\203A';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.mega-nav span.mega-nav-icon.big-screen::after {
+    left: 20px;
 }
 
 /* media query */
@@ -103,41 +139,44 @@ nav button {
         border: 1px solid var(--color-border);
         width: max-content;
     }
+
     .third-nev {
         position: absolute;
         left: 100%;
         top: 0;
-        border: 1px solid var(--color-border);
         width: max-content;
-        height: 100%;
+    }
+
+    .mega-nav:hover .secondary-nev {
+        display: block;
+    }
+
+    .mega-nav span.mega-nav-icon {
+        top: 2px;
+        left: 125px;
+        width: 46px;
+    }
+    .secondary-nev ul li {
+        padding-right: 40px;
+    }
+    .mega-nav .mega-nav-icon.big-screen::after{
+        display: none;
     }
 }
 
 @media (max-width: 992px) {
-    nav {
-        display: block;
-    }
-
     .nav-title {
         position: absolute;
         transform: translateX(-110%);
         transition: all 1s;
         display: block;
-        width: 300px;
+        width: 250px;
         border: 1px solid var(--color-border);
-        height: 100vh;    
+        height: 100vh;
         text-align: justify;
     }
 
-    nav li:hover {
-        background: var(--color-green);
-    }
-
-    nav li:hover a {
-        color: var(--color-white);
-    }
-
-    nav button {
+    nav button, nav {
         display: block;
     }
 
@@ -147,6 +186,9 @@ nav button {
 
     header .container {
         width: auto;
+    }
+    .mega-nav span.mega-nav-icon::after {
+        left: 40px;
     }
 }
 

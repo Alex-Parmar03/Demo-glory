@@ -1,0 +1,35 @@
+.accordion-item{
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.accordion-item .accordion-lable{
+    background: var(--color-green);
+    padding: 15px 30px;
+    color: var(--color-black);
+    font-size: 1.6rem;
+}
+.accordion-item .accordion-content{
+    position: relative;
+    background: var(--color-white-gray);
+    padding: 20px;
+    display: none;
+}
+.accordion-lable h3 span.accordion-icon{
+    content: url(../images/accordion-arrow.png);
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    transform: rotate(180deg);
+    transition: all 1s;
+    filter: invert(1);
+}
+.active{
+    display: block;
+}
+.accordion-item.active .accordion-content {
+    display: block;
+}
+.accordion-item.active .accordion-lable h3 span{
+    transform: rotate(0deg) !important;
+}

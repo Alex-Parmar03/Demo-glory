@@ -1,0 +1,15 @@
+.tab-btn {
+    background: var(--color-green);
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    font-weight: bold;
+}
+.tab-content {
+    background: var(--color-white-gray);
+    padding: 20px;
+    display: none;
+}
+.tab-content.block {
+    display: block;
+}
