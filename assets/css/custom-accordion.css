@@ -31,5 +31,26 @@
     display: block;
 }
 .accordion-item.active .accordion-lable h3 span{
-    transform: rotate(0deg) !important;
+    transform: rotate(0deg);
+}
+
+
+
+/* ex */
+
+.accordion-content.ex {
+    background: var(--color-white-gray);
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    padding: 0;
+}
+.accordion-lable.ex {
+    padding: 15px 20px;
+}
+.accordion-item.ex.active .accordion-content {
+    height: 200px;
+}
+.accordion-content.ex p {
+    padding: 20px;
 }

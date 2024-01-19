@@ -9,25 +9,22 @@ function secondary_nevigation(){
 }
 
 // accordion
-let accordionitem = document.querySelectorAll(".accordion-item");
+let accordionitems = document.querySelectorAll(".accordion-item");
 
-accordionitem.forEach(item => {
-    let title = item.querySelector(".accordion-lable");
+accordionitems.forEach(item => {
+    let lable = item.querySelector(".accordion-lable");
     let content = item.querySelector(".accordion-content");
-    title.addEventListener('click', function() {
-        for( i = 0; i < accordionitem.length; i++){
-            if(accordionitem[i] == item){
+    lable.addEventListener('click', function() {
+        for( i = 0; i < accordionitems.length; i++){
+            if(accordionitems[i] == item){
                 item.classList.toggle("active");
             }
             else{
-                accordionitem[i].classList.remove("active");
+                accordionitems[i].classList.remove("active");
             }
-        }
-        
+        }        
 });
 });
-
-
 
 // tabs
 let tabbtn = document.querySelector(".tab-btn");
