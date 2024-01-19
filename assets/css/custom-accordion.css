@@ -10,10 +10,12 @@
     font-size: 1.6rem;
 }
 .accordion-item .accordion-content{
-    position: relative;
     background: var(--color-white-gray);
-    padding: 20px;
-    display: none;
+    height: 0px;
+    overflow: hidden;
+    transition: all 2.5s ease-in-out;
+    padding: 0;
+    max-height: 0px;
 }
 .accordion-lable h3 span.accordion-icon{
     content: url(../images/accordion-arrow.png);
@@ -28,29 +30,15 @@
     display: block;
 }
 .accordion-item.active .accordion-content {
-    display: block;
+    height: auto;
+    max-height: 2000px;
 }
 .accordion-item.active .accordion-lable h3 span{
     transform: rotate(0deg);
 }
-
-
-
-/* ex */
-
-.accordion-content.ex {
-    background: var(--color-white-gray);
-    height: 0px;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-    padding: 0;
-}
-.accordion-lable.ex {
+.accordion-lable {
     padding: 15px 20px;
 }
-.accordion-item.ex.active .accordion-content {
-    height: 200px;
-}
-.accordion-content.ex p {
+.accordion-content p {
     padding: 20px;
 }
