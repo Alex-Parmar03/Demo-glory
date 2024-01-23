@@ -26,24 +26,15 @@ accordionitems.forEach(item => {
     });
 });
 
-// tabs
-// let tabbtn = document.querySelectorAll(".tab-btn");
-
-// tabbtn.forEach(tab => {
-//     let btnid = this.IDBIndex();
-//     tabbtn.addEventListener('click', function (){
-
-//         document.querySelector('.tab-content').classList.toggle('block');
-//     })
-// })
-
 
 var tabbtn = document.querySelectorAll(".tab-btn");
 
     for (var i = 0; i < tabbtn.length; i++) {
       tabbtn[i].addEventListener("click", function () {
+        
         var tabid = this.dataset.tab;
         var tabcontent = document.getElementById(tabid);
+        
         var alltabcontent = document.querySelectorAll(".tab-content");
         var alltabbtn = document.querySelectorAll(".tab-btn");
 

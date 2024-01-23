@@ -16,10 +16,9 @@
 .tab-content.block {
     display: block;
 }
-.active {
-    display: block;
-}
 .tab-btn.active {
-    background: var(--color-light-green);
+    background: var(--color-white-gray);
     border: 2px solid;
+    border-bottom: 0px;
+    border-top-right-radius: 10px;
 } 
