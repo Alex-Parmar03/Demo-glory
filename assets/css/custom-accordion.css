@@ -1,15 +1,17 @@
-.accordion-item{
+.accordion-item {
     padding: 10px;
     position: relative;
     cursor: pointer;
 }
-.accordion-item .accordion-lable{
+
+.accordion-item .accordion-lable {
     background: var(--color-green);
     padding: 15px 30px;
     color: var(--color-black);
     font-size: 1.6rem;
 }
-.accordion-item .accordion-content{
+
+.accordion-item .accordion-content {
     background: var(--color-white-gray);
     height: 0px;
     overflow: hidden;
@@ -17,7 +19,8 @@
     padding: 0;
     max-height: 0px;
 }
-.accordion-lable h3 span.accordion-icon{
+
+.accordion-lable h3 span.accordion-icon {
     content: url(../images/accordion-arrow.png);
     position: absolute;
     right: 40px;
@@ -26,19 +29,24 @@
     transition: all 1s;
     filter: invert(1);
 }
-.active{
-    display: block;
+
+.active {
+    height: auto;
 }
+
 .accordion-item.active .accordion-content {
     height: auto;
     max-height: 2000px;
 }
-.accordion-item.active .accordion-lable h3 span{
+
+.accordion-item.active .accordion-lable h3 span {
     transform: rotate(0deg);
 }
+
 .accordion-lable {
     padding: 15px 20px;
 }
+
 .accordion-content p {
     padding: 20px;
 }
