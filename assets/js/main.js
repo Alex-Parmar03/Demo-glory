@@ -26,29 +26,28 @@ accordionitems.forEach(item => {
     });
 });
 
-
+// tab module
 var tabbtn = document.querySelectorAll(".tab-btn");
 
-    for (var i = 0; i < tabbtn.length; i++) {
-      tabbtn[i].addEventListener("click", function () {
-        
+for (var i = 0; i < tabbtn.length; i++) {
+    tabbtn[i].addEventListener("click", function () {
+
         var tabid = this.dataset.tab;
         var tabcontent = document.getElementById(tabid);
-        
+
         var alltabcontent = document.querySelectorAll(".tab-content");
         var alltabbtn = document.querySelectorAll(".tab-btn");
 
         for (var j = 0; j < alltabcontent.length; j++) {
-          alltabcontent[j].style.display = "none";
+            alltabcontent[j].style.display = "none";
         }
 
         for (var k = 0; k < alltabbtn.length; k++) {
-          alltabbtn[k].classList.remove("active");
+            alltabbtn[k].classList.remove("active");
         }
 
         tabcontent.style.display = "block";
         this.classList.add("active");
-      });
-    }
-
-    document.querySelector(".tab-btn").click();
+    });
+}
+document.querySelector(".tab-btn").click();
