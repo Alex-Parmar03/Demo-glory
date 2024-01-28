@@ -27,6 +27,10 @@ html{
 }
 a {
     width: fit-content;
+    font-size: 1.5rem;
+    display: block;
+    text-decoration: none;
+    color: var(--color-black);
 }
 h1 {
     font-size: 3.0rem;
@@ -48,6 +52,7 @@ h6 {
 }
 p {
     font-size: 1.6rem;
+    margin-bottom: 30px;
 }
 img {
     width: 100%;
@@ -70,6 +75,18 @@ img {
 }
 .primary-cta:hover {
     background: var(--color-white-gray);
+    text-shadow: 1px 1px 3px var(--color-gray);
+    box-shadow: 1px 2px 10px;
+}
+.secondary-cta {
+    background: var(--color-light-green);
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: all 0.5s;
+    margin-top: 20px;
+}
+.secondary-cta:hover {
+    background: var(--color-green);
     text-shadow: 1px 1px 3px var(--color-gray);
     box-shadow: 1px 2px 10px;
 }
