@@ -7,14 +7,15 @@ secnav.addEventListener('click', function() {
 
 let secmeganavigation = document.querySelector(".mega-navigation");
 secmeganavigation.addEventListener('click', function() {
-    document.querySelector(".mega-nav-two").classList.add("sec-mega-nav-block");
+    document.querySelector(".mega-nav-two").classList.toggle("sec-mega-nav-block");
 });
 
 // navigation-back-btn
-let navigationbackbtn = document.querySelector(".responsive-back-btn");
-navigationbackbtn.addEventListener('click', function () {
-    document.querySelector(".mega-nav-two").classList.toggle("sec-mega-nav-block");
-});
+
+// let navigationbackbtn = document.querySelector(".responsive-back-btn");
+// navigationbackbtn.addEventListener('click', function () {
+//     document.querySelector(".mega-nav-two").classList.toggle("sec-mega-nav-block");
+// });
 
 
 // navigation ---------------------------
