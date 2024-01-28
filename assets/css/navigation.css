@@ -2,13 +2,13 @@ header {
     position: sticky;
     z-index: 1;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-nav img {
+.nav-image img {
     max-width: 120px;
 }
 
@@ -17,9 +17,10 @@ nav ul li a {
     color: var(--color-black);
     font-size: 1.7rem;
     font-weight: bold;
+    display: block;
 }
 
-nav ul li a::after {
+.mega-navigation-main nav ul li a::after {
     content: '';
     display: block;
     position: relative;
@@ -27,10 +28,10 @@ nav ul li a::after {
     width: 0px;
     height: 3px;
     background: var(--color-green);
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
-nav ul li a:hover::after {
+.mega-navigation-main nav ul li a:hover::after {
     width: 100%;
 }
 
@@ -43,8 +44,8 @@ nav ul {
     margin: 0px;
 }
 
-header {
-    border-bottom: 1px solid var(--color-border);
+.mega-navigation-main {
+    border: 1px solid var(--color-border);
     margin: 10px 0px;
 }
 
@@ -55,21 +56,67 @@ header {
     background: var(--color-white);
 }
 
-.nav-title li {
+.nav-title li, .mega-navigation {
     cursor: pointer;
 }
 
 /* navigation toggle button */
 nav button {
     position: relative;
-    right: 0;
+    right: 5px;
     bottom: 35px;
     display: none;
-    background-image: url(../images/toggle-icon.png);
-    background-position: center;
-    background-size: cover;
-    height: 30px;
-    width: 30px;
+    background: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+}
+
+nav button span:nth-child(1){
+    position: relative;
+    content: '';
+    height: 5px;
+    width: 25px;
+    display: block;
+    background: black;
+    border-radius: 150px;
+    top: 0;
+    transition: all 1s;
+}
+nav button span:nth-child(2){
+    position: relative;
+    content: '';
+    height: 5px;
+    width: 25px;
+    display: block;
+    background: black;
+    border-radius: 150px;
+    top: 5px;
+    transition: all 1s;
+}
+nav button span:nth-child(3){
+    position: relative;
+    content: '';
+    height: 5px;
+    width: 25px;
+    display: block;
+    background: black;
+    border-radius: 150px;
+    top: 10px;
+    transition: all 1s;
+}
+
+nav button.resposive-nav-btn span:nth-child(1){
+    top: 5px;
+    rotate: 40deg;
+}
+nav button.resposive-nav-btn span:nth-child(2){
+    top: 0px;
+    rotate: -40deg;
+}
+
+nav button.resposive-nav-btn span:nth-child(3){
+    opacity: 0;    
 }
 
 /* mega nav */
@@ -105,7 +152,7 @@ nav button {
     position: relative;
 }
 
-.third-nev-main:hover .third-nev, .mega-nav-block {
+.third-nev-main:hover .third-nev {
     display: block;
 }
 
@@ -126,6 +173,7 @@ nav button {
     top: 10px;
     left: 20px;
 }
+
 .mega-nav span.mega-nav-icon.big-screen::after {
     left: 20px;
 }
@@ -156,10 +204,12 @@ nav button {
         left: 125px;
         width: 46px;
     }
+
     .secondary-nev ul li {
         padding-right: 40px;
     }
-    .mega-nav .mega-nav-icon.big-screen::after{
+
+    .mega-nav .mega-nav-icon.big-screen::after {
         display: none;
     }
 }
@@ -176,7 +226,8 @@ nav button {
         text-align: justify;
     }
 
-    nav button, nav {
+    nav button,
+    nav , .mega-nav-block {
         display: block;
     }
 
@@ -187,12 +238,157 @@ nav button {
     header .container {
         width: auto;
     }
+
     .mega-nav span.mega-nav-icon::after {
         left: 40px;
     }
+    
+    .secondary-nev .navigation-back-btn {
+        position: absolute;
+        top: 1px;
+        right: 10px;
+        content: "back";
+        font-size: 1.5rem;
+    }
+    .nav-image {
+        padding-top: 20px ;
+    }
 }
 
-.block {
+
+
+
+
+
+/* --------------------- second mega navigation ----------------------- */
+.second-mega-nav {
+    background: var(--color-light-green);
+}
+.navigation-title {
+    display: flex;
+}
+.navigation img {
+    background: var(--color-white);
+}
+.mega-nav .row {
+    width: 100%;
+}
+
+.mega-navigation:hover {
+    background: var(--color-green);
+}
+
+.mega-nav-two .row .col-4:first-child {
+    border: none;
+}
+.mega-navigation-image {
+    padding: 20px;
+    width: 50%;
+}
+
+.mega-navigation-image img {
+    box-shadow: 1px 1px 10px var(--color-black);
+}
+
+.mega-nav-two .main-navigation-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px;
+}
+.second-mega-nav .mega-navigation {
+    padding: 27px 20px;
+}
+.secondary-nevigation ul li {
+    transition: all 0.5s;
+    padding: 10px 20px;
+}
+.secondary-nevigation li:hover {
+    padding-left: 40px;
+    background: var(--color-light-green);
+}
+.hello {
+    padding: 100px 0px ;
+}
+
+/* Media query */
+@media (min-width : 992px){
+    .mega-nav-two {
+        position: absolute;
+        width: -webkit-fill-available;
+        background-color: var(--color-green);
+        left: 0;
+        top: 35%;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s;
+        z-index: 5;
+        padding: 20px;
+    }
+    .mega-nav-two .row .col-4 {
+        border-left: 1px solid var(--color-gray);
+        padding: 0px;
+    }
+    .mega-navigation:hover .mega-nav-two {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        top: 22%;    
+    }
+}
+@media (max-width : 992px){
+    .navigation {
+        background: var(--color-light-green);
+        padding-left: 10px;
+    }
+    .second-mega-nav {
+        background: none;
+    }
+    .navigation-title {
+        display: block;
+        background: var(--color-light-green);
+        width: 200px;
+        transform: translateX(-110%);
+        transition: all 1s;
+        height: 90vh;
+    }
+    .mega-nav-two .row .col-4:nth-child(1), .mega-nav-two .row .col-4:nth-child(3) {
+        display: none;
+    }
+    .mega-nav-two {
+        position: absolute;
+        width: 192px;
+        transform: translateX(-125%);
+        top: 0 !important;
+        height: -webkit-fill-available;
+        transition: all 1s;
+    }
+    .second-mega-nav .col-12 {
+        padding: 0px;
+    }
+    .secondary-nevigation{
+        background: var(--color-green);
+        padding-top: 20px;
+        width: 200px;
+        height: 90vh;
+    }
+    .secondary-nevigation .responsive-back-btn {
+        position: fixed;
+        top: 2px;
+        right: 10px;
+    }
+    .sec-mega-nav-block {
+        transform: translateX(-20%);
+    }
+    .mega-navigation {
+        transition: all 1s;
+    }
+}
+
+
+/* css used for both navigation */
+.block{
     transform: translateX(-3%);
 }
 
