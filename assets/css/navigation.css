@@ -134,10 +134,6 @@ nav button.resposive-nav-btn span:nth-child(3){
     padding-bottom: 0px;
 }
 
-.secondary-nev ul:last-child {
-    padding-bottom: 20px;
-}
-
 .third-nev {
     display: none;
     position: absolute;
@@ -158,7 +154,7 @@ nav button.resposive-nav-btn span:nth-child(3){
 
 
 /* icon */
-.mega-nav span.mega-nav-icon {
+nav span.mega-nav-icon {
     position: absolute;
     top: 0;
     right: 0;
@@ -166,7 +162,7 @@ nav button.resposive-nav-btn span:nth-child(3){
     width: 46px;
 }
 
-.mega-nav span.mega-nav-icon::after {
+nav span.mega-nav-icon::after {
     display: block;
     content: '\203A';
     position: absolute;
@@ -174,7 +170,11 @@ nav button.resposive-nav-btn span:nth-child(3){
     left: 20px;
 }
 
-.mega-nav span.mega-nav-icon.big-screen::after {
+nav .mega-navigation span.mega-nav-icon {
+    top: 8px;
+}
+
+nav span.mega-nav-icon.big-screen::after {
     left: 20px;
 }
 
@@ -199,7 +199,7 @@ nav button.resposive-nav-btn span:nth-child(3){
         display: block;
     }
 
-    .mega-nav span.mega-nav-icon {
+    nav span.mega-nav-icon {
         top: 2px;
         left: 125px;
         width: 46px;
@@ -209,8 +209,11 @@ nav button.resposive-nav-btn span:nth-child(3){
         padding-right: 40px;
     }
 
-    .mega-nav .mega-nav-icon.big-screen::after {
+    nav .mega-nav-icon.big-screen::after {
         display: none;
+    }
+    .secondary-nev ul:last-child {
+        padding-bottom: 20px;
     }
 }
 
@@ -222,10 +225,12 @@ nav button.resposive-nav-btn span:nth-child(3){
         display: block;
         width: 250px;
         border: 1px solid var(--color-border);
-        height: 100vh;
+        min-height: 100vh;
         text-align: justify;
     }
-
+    .nav-title .mega-nav {
+        padding-bottom: 0px;
+    }
     nav button,
     nav , .mega-nav-block {
         display: block;
@@ -257,18 +262,12 @@ nav button.resposive-nav-btn span:nth-child(3){
 
 
 
-
-
-
 /* --------------------- second mega navigation ----------------------- */
 .second-mega-nav {
     background: var(--color-light-green);
 }
 .navigation-title {
     display: flex;
-}
-.navigation img {
-    background: var(--color-white);
 }
 .mega-nav .row {
     width: 100%;
@@ -366,6 +365,7 @@ nav button.resposive-nav-btn span:nth-child(3){
         top: 0 !important;
         height: -webkit-fill-available;
         transition: all 1s;
+        z-index: 5;
     }
     .second-mega-nav .col-12 {
         padding: 0px;
@@ -376,16 +376,26 @@ nav button.resposive-nav-btn span:nth-child(3){
         width: 200px;
         height: 90vh;
     }
-    .secondary-nevigation .responsive-back-btn {
+    .mega-navigation .responsive-back-btn {
         position: fixed;
         top: 2px;
         right: 10px;
+        display: block;
+        padding: 3px 5px;
+        font-size: 1.1rem;
+        text-decoration: underline;
     }
     .sec-mega-nav-block {
-        transform: translateX(-20%);
+        transform: translateX(-18%);
     }
     .mega-navigation {
         transition: all 1s;
+        padding: 15px !important;
+    }
+    .mega-navigation .second-mega-icon {
+        position: relative;
+        bottom: 50px;
+        left: 20px;
     }
 }
 

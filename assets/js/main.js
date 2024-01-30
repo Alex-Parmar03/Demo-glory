@@ -1,40 +1,57 @@
 // second mega navigation ---------------
 let secnav = document.querySelector(".navigation-btn");
-secnav.addEventListener('click', function() {
+secnav.addEventListener('click', function () {
     document.querySelector(".navigation-title").classList.toggle("block");
     document.querySelector(".navigation-btn").classList.toggle("resposive-nav-btn");
 });
 
-let secmeganavigation = document.querySelector(".mega-navigation");
-secmeganavigation.addEventListener('click', function() {
-    document.querySelector(".mega-nav-two").classList.toggle("sec-mega-nav-block");
+
+// second mega menu sub navigation open
+let secmeganavigation = document.querySelectorAll(".mega-navigation");
+
+secmeganavigation.forEach(navitem => {
+    let show = navitem.querySelector(".mega-nav-two");
+    navitem.addEventListener('click', function () {
+        for (let i = 0; i < secmeganavigation.length; i++) {
+            if (secmeganavigation[i] == navitem) {
+                show.classList.toggle("sec-mega-nav-block");
+            }
+        }
+    });
 });
 
-// navigation-back-btn
-
+// navigation-back-btn -----------------
 // let navigationbackbtn = document.querySelector(".responsive-back-btn");
 // navigationbackbtn.addEventListener('click', function () {
-//     document.querySelector(".mega-nav-two").classList.toggle("sec-mega-nav-block");
+//     document.querySelector(".mega-nav-two").classList.remove("sec-mega-nav-block");
 // });
 
 
-// navigation ---------------------------
+// let navigationbackbtn = document.querySelector(".responsive-back-btn");
+// navigationbackbtn.addEventListener('click', function () {
+//     let back = navigationbackbtn.parentElement;
+//     back.removeClass("sec-mega-nav-block");
+// });
+
+// first mega navigation ---------------------------
 let nav = document.querySelector(".nav-btn");
 nav.addEventListener("click", function () {
     document.querySelector(".nav-title").classList.toggle("block");
     document.querySelector(".nav-btn").classList.toggle("resposive-nav-btn");
 });
 
-
-let meganav = document.querySelector(".mega-nav");
-meganav.addEventListener("click", function(){
-    document.querySelector(".secondary-nev").classList.toggle("mega-nav-block");
+// first mega navigation sub item open
+let meganav = document.querySelectorAll(".mega-nav");
+meganav.forEach(meganavitem => {
+    let subnav = meganavitem.querySelector(".secondary-nev");
+    meganavitem.addEventListener('click', function(){
+        for(let i = 0; i < meganav.length; i++){
+            if(meganav[i] == meganavitem){
+                subnav.classList.toggle("mega-nav-block");
+            }
+        }
+    });
 });
-
-// function secondary_nevigation() {
-//     document.querySelector(".secondary-nev").classList.add("mega-nav-block");
-// }
-
 
 
 // accordion -----------------------------
