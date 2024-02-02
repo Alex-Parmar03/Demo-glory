@@ -1,38 +1,3 @@
-// second mega navigation ---------------
-let secnav = document.querySelector(".navigation-btn");
-secnav.addEventListener('click', function () {
-    document.querySelector(".navigation-title").classList.toggle("block");
-    document.querySelector(".navigation-btn").classList.toggle("resposive-nav-btn");
-});
-
-
-// second mega menu sub navigation open
-let secmeganavigation = document.querySelectorAll(".mega-navigation");
-
-secmeganavigation.forEach(navitem => {
-    let show = navitem.querySelector(".mega-nav-two");
-    navitem.addEventListener('click', function () {
-        for (let i = 0; i < secmeganavigation.length; i++) {
-            if (secmeganavigation[i] == navitem) {
-                show.classList.toggle("sec-mega-nav-block");
-            }
-        }
-    });
-});
-
-// navigation-back-btn -----------------
-// let navigationbackbtn = document.querySelector(".responsive-back-btn");
-// navigationbackbtn.addEventListener('click', function () {
-//     document.querySelector(".mega-nav-two").classList.remove("sec-mega-nav-block");
-// });
-
-
-// let navigationbackbtn = document.querySelector(".responsive-back-btn");
-// navigationbackbtn.addEventListener('click', function () {
-//     let back = navigationbackbtn.parentElement;
-//     back.removeClass("sec-mega-nav-block");
-// });
-
 // first mega navigation ---------------------------
 let nav = document.querySelector(".nav-btn");
 nav.addEventListener("click", function () {
@@ -44,9 +9,9 @@ nav.addEventListener("click", function () {
 let meganav = document.querySelectorAll(".mega-nav");
 meganav.forEach(meganavitem => {
     let subnav = meganavitem.querySelector(".secondary-nev");
-    meganavitem.addEventListener('click', function(){
-        for(let i = 0; i < meganav.length; i++){
-            if(meganav[i] == meganavitem){
+    meganavitem.addEventListener('click', function () {
+        for (let i = 0; i < meganav.length; i++) {
+            if (meganav[i] == meganavitem) {
                 subnav.classList.toggle("mega-nav-block");
             }
         }
@@ -98,3 +63,27 @@ for (var i = 0; i < tabbtn.length; i++) {
     });
 }
 document.querySelector(".tab-btn").click();
+
+
+// second mega navigation ---------------
+let secnav = document.querySelector(".navigation-btn");
+secnav.addEventListener('click', function () {
+    document.querySelector(".navigation-title").classList.toggle("block");
+    document.querySelector(".navigation-btn").classList.toggle("resposive-nav-btn");
+});
+
+// second mega menu sub navigation open
+let secmeganavigation = document.querySelectorAll(".mega-navigation");
+secmeganavigation.forEach(navitem => {
+    let secbtn = navitem.querySelector(".ancor");
+    let show = navitem.querySelector(".mega-nav-two");
+    let backbtn = navitem.querySelector(".responsive-back-btn");
+
+    secbtn.addEventListener('click', function () {
+        show.classList.add("sec-mega-nav-block");
+    });
+
+    backbtn.addEventListener('click', function () {
+        show.classList.remove("sec-mega-nav-block");
+    });
+});

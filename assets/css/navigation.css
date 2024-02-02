@@ -262,6 +262,9 @@ nav span.mega-nav-icon.big-screen::after {
 
 
 
+
+
+
 /* --------------------- second mega navigation ----------------------- */
 .second-mega-nav {
     background: var(--color-light-green);
@@ -339,6 +342,7 @@ nav span.mega-nav-icon.big-screen::after {
         display: none;
     }
 }
+
 @media (max-width : 992px){
     .navigation {
         background: var(--color-light-green);
@@ -367,6 +371,9 @@ nav span.mega-nav-icon.big-screen::after {
         transition: all 1s;
         z-index: 5;
     }
+    .navigation-title li.mega-navigation:nth-child(2) .mega-nav-two {
+        top: -100% !important;
+    }
     .second-mega-nav .col-12 {
         padding: 0px;
     }
@@ -386,16 +393,39 @@ nav span.mega-nav-icon.big-screen::after {
         text-decoration: underline;
     }
     .sec-mega-nav-block {
-        transform: translateX(-18%);
+        transform: translateX(-10%);
     }
     .mega-navigation {
         transition: all 1s;
         padding: 15px !important;
     }
     .mega-navigation .second-mega-icon {
-        position: relative;
+        /* position: relative;
         bottom: 50px;
-        left: 20px;
+        left: 20px; */
+        position: absolute;
+        background: var(--color-green);
+        width: 35px;
+        height: 56px;
+        bottom: 0px;
+        right: 0px;
+    }
+    .mega-navigation .second-mega-icon:hover {
+        background: var(--color-light-green);
+    }
+    .second-mega-nav .mega-navigation{
+        position: relative;
+        padding: 0px !important;
+    }
+    .mega-navigation a {
+        padding: 15px;
+    }
+    .ancor .mega-nav-icon::after{
+        top: 0;
+        left: 25px !important;
+    }
+    .mega-navigation .secondary-nevigation li {
+        padding: 0px !important;
     }
 }
 
