@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo glory</title>
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- main css -->
     <link rel="stylesheet" href="./assets/css/main.css">
+
 </head>
 
 <body>
@@ -329,12 +335,146 @@
         </section>
         <!-- tab module end -->
 
+        <!-- swiper slider start -->
+
+        <section class="swiper-slider-mian p-tb">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="swiper swiperslider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slider-content">
+                                        <img src="./assets/images/slider.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider-content">
+                                        <img src="./assets/images/slider-1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider-content">
+                                        <img src="./assets/images/slider.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider-content">
+                                        <img src="./assets/images/slider-1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="offset-sm-1 col-5">
+                        <div class="swiper swiperslider slide-main">
+                            <div class="swiper-wrapper slider">
+                                <div class="swiper-slide slide">
+                                    <div class="slider-content">
+                                        <div class="lable">
+                                            <p>Consumer</p>
+                                        </div>
+                                        <div class="title">
+                                            <h5>Breitling</h5>
+                                            <h5 class="slider-year">2021</h5>
+                                        </div>
+                                        <div class="slider-cta">
+                                            <a href="">View case study</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide slide">
+                                    <div class="slider-content">
+                                        <div class="lable">
+                                            <p>Consumer support</p>
+                                        </div>
+                                        <div class="title">
+                                            <h5>Breitling</h5>
+                                            <h5 class="slider-year">2022</h5>
+                                        </div>
+                                        <div class="slider-cta">
+                                            <a href="">View case study</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide slide">
+                                    <div class="slider-content">
+                                        <div class="lable">
+                                            <p>Consumer</p>
+                                        </div>
+                                        <div class="title">
+                                            <h5>Breitling</h5>
+                                            <h5 class="slider-year">2023</h5>
+                                        </div>
+                                        <div class="slider-cta">
+                                            <a href="">View case study</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide slide">
+                                    <div class="slider-content">
+                                        <div class="lable">
+                                            <p>Consumer</p>
+                                        </div>
+                                        <div class="title">
+                                            <h5>Breitling</h5>
+                                            <h5 class="slider-year">2024</h5>
+                                        </div>
+                                        <div class="slider-cta">
+                                            <a href="">View case study</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-box">
+                                <div class="loader"></div>
+                                <div class="next-prev-btn">
+                                    <div class="swiper-button-next slider-next"></div>
+                                    <div class="swiper-button-prev slider-prev"></div>
+                                </div>
+                                <div class="swiper-pagination slider-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- swiper slider end -->
+
     </main>
 
     <footer>
 
     </footer>
-    
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- slider scrip -->
+    <script>
+        var swiper = new Swiper(".swiperslider", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            speed: 5000,
+            autoplay: {
+                delay: 1000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+    <!-- main js -->
     <script src="./assets/js/main.js"></script>
 
     <script>

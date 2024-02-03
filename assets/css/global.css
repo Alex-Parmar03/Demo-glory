@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
-    
+    padding: 0;
+    margin: 0;
 }
 :root {
     --color-white: #ffffff;
@@ -10,8 +11,9 @@
     --color-black: #151515;
     --color-light-green: #cef1ea;
     --color-green: #b4e5db;
-    margin: 0;
-    padding: 0;
+    --color-brown: #896C4C;
+    --color-light-brown: #ECEAE4;
+
 }
 .container-fluid {
     max-width: 1200px;

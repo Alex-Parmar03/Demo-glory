@@ -1,0 +1,134 @@
+.slider-box {
+    background: var(--color-brown);
+    position: relative;
+    width: 150px;
+    bottom: 200px;
+    z-index: 9;
+    height: 200px;
+    left: 0px;
+}
+.slider-box .slider-next {
+    position: relative;
+}
+.slide {
+    position: relative;
+}
+.slide .slider-content {
+    position: relative;
+    left: 150px;
+    background: var(--color-light-brown);
+    width: 300px;
+    height: 200px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+}
+.slider-box .slider-pagination {
+    font-size: 2rem;
+    top: 70px;
+    color: var(--color-white);
+    height: 30px;
+}
+.next-prev-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.next-prev-btn .slider-next::after, .next-prev-btn .slider-prev::after {
+    font-size: 1.2rem;
+    color: #D92B2B;
+}
+.slider-next {
+    left: 56px;
+    top: 4px;
+    background: var(--color-white);
+    width: 50px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.slider-prev {
+    left: 5px;
+    background: var(--color-white);
+    width: 50px;
+    height: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.slide-main {
+    width: 450px;
+    height: 200px;
+    background: var(--color-light-brown);
+    position: relative;
+    bottom: 60px;
+}
+.title h5.slider-year {
+    color: var(--color-gray);
+}
+.title h5 {
+    font-size: 2.5rem;
+}
+.slider-cta a::after {
+    content: '>';
+    width: 25px;    
+    height: 25px;
+    display: block;
+    background: #5C5B59;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    border-radius: 50%;
+    color: var(--color-white);
+    text-align: center;
+}
+.slider-content img {
+    min-height: 600px;
+}
+
+/* Media query */
+@media (max-width: 500px){
+    .slide-main {
+        bottom: 0;
+        width: 360px;
+    }
+    .slider-content img {
+        height: 50vh;
+    }
+    .slider .slider-content {
+        width: 220px;
+    }
+}
+
+
+
+/* loder */
+.slider-box .loader {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    border: 5px solid rgb(205 194 160);
+    border-radius: 50%;
+    border-top: 5px solid var(--color-white);
+    animation: load 10s ease infinite;
+}
+
+@keyframes load {
+    0% {
+        border-top: 5px solid var(--color-white);
+    }
+    25% {
+        border-right: 5px solid var(--color-white);
+    }
+    50% {
+        border-bottom: 5px solid var(--color-white);
+    }
+    100% {
+        border-left: 5px solid var(--color-white);
+    }
+}
+
+/* loder */
