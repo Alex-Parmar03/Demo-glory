@@ -1,13 +1,14 @@
-/* property carousal main */
-.property-carousal-main {
-    position: relative;
-}
 /* background image */
 .property-carousal-background-image {
     clip-path: polygon(100% 0%, 100% 0%, 100% 100%, -130% 100%);
 }
 .property-carousal-background-image img {
     height: 875px;
+}
+
+/* property carousal main */
+.property-carousal-main {
+    position: relative;
 }
 
 /* main slider */
