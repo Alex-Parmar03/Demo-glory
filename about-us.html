@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About US</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+
+    <!-- property carousal start -->
+    <section class="property-carousal-main p-tb">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="property-carousal-background-image">
+                        <img class="" src="./assets/images/property-carousal-background.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 offset-md-2 col-md-7 col-lg-6">
+                        <div class="swiper propertyslider property-slide-main">
+                            <div class="swiper-wrapper property-slider">
+                                <div class="swiper-slide property-slide">
+                                    <div class="property-image">
+                                        <img src="./assets/images/property-slider.png" alt="">
+                                    </div>
+                                    <div class="property-content">
+                                        <p>Form</p>
+                                        <h5>Private Real Estate</h5>
+                                        <div class="property-cta">
+                                            <a href=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide property-slide">
+                                    <div class="property-image">
+                                        <img src="./assets/images/property-slider.png" alt="">
+                                    </div>
+                                    <div class="property-content">
+                                        <p>Form</p>
+                                        <h5>Private Real Estate</h5>
+                                        <div class="property-cta">
+                                            <a href=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide property-slide">
+                                    <div class="property-image">
+                                        <img src="./assets/images/property-slider.png" alt="">
+                                    </div>
+                                    <div class="property-content">
+                                        <p>Form</p>
+                                        <h5>Private Real Estate</h5>
+                                        <div class="property-cta">
+                                            <a href=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 offset-md-1 col-md-4 col-lg-3">
+                        <div class="property-slider-box">
+                            <div class="property-loader"></div>
+                            <div class="class">
+                            <div class="property-next-prev-btn">
+                                <div class="swiper-button-next property-slider-next"></div>
+                                <div class="swiper-button-prev property-slider-prev"></div>
+                            </div>
+                            <div class="swiper-pagination property-pagination"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- property carousal end -->
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // property carousal
+
+        var propertyswiper = new Swiper(".propertyslider", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            speed: 3000,
+            autoplay: {
+                delay: 1000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+
+</html>

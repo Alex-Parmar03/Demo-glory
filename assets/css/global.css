@@ -15,9 +15,6 @@
     --color-light-brown: #ECEAE4;
 
 }
-.container-fluid {
-    max-width: 1200px;
-}
 .bg-white {
     background: var(--color-white);
 }
